@@ -4,7 +4,12 @@ import subprocess
 from datetime import date
 
 
-for i in range(1,10,1):
+import random
+
+# Generate a random integer between 1 and 8
+random_integer = random.randint(2, 8)
+
+for i in range(1,random_integer,1):
 
     #########github token = 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
     # Define the repository URL
