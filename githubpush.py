@@ -4,26 +4,33 @@ import subprocess
 from datetime import date
 
 
-#########github token = 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
-# Define the repository URL
-repo_url = "https://github.com/anirudhchandnani/GenAIMaster.git"
+for i in range(1,10,1):
 
-# Set the path to your local clone of the repository
-local_repo_path = r"C:\Users\LENOVO\Desktop\work\github"
+    #########github token = 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
+    # Define the repository URL
+    repo_url = "https://github.com/anirudhchandnani/GenAIMaster.git"
+    
+    import time
 
-# Change to the local repository directory
-os.chdir(local_repo_path)
-
-# Create a random change in a Python file
-random_value = random.randint(1, 100)
-file_to_modify = "hello.py"  # Change this to the actual file you want to modify
-with open(file_to_modify, "a") as file:
-    file.write(f"\n# Random change: {random_value} ({date.today()})")
-
-# Commit and push the change
-commit_message = f"Daily random change: {random_value} ({date.today()})"
-subprocess.run(["git", "add", "."])
-subprocess.run(["git", "commit", "-m", commit_message])
-subprocess.run(["git", "push", "origin", "main"])
-
-print(f"Pushed a random change to {repo_url}")
+# Sleep for two seconds
+    time.sleep(2)
+    
+    # Set the path to your local clone of the repository
+    local_repo_path = r"C:\Users\LENOVO\Desktop\work\github"
+    
+    # Change to the local repository directory
+    os.chdir(local_repo_path)
+    
+    # Create a random change in a Python file
+    random_value = random.randint(1, 100)
+    file_to_modify = "hello.py"  # Change this to the actual file you want to modify
+    with open(file_to_modify, "a") as file:
+        file.write(f"\n# Random change: {random_value} ({date.today()})")
+    
+    # Commit and push the change
+    commit_message = f"Daily random change: {random_value} ({date.today()})"
+    subprocess.run(["git", "add", "."])
+    subprocess.run(["git", "commit", "-m", commit_message])
+    subprocess.run(["git", "push", "origin", "main"])
+    
+    print(f"Pushed a random change to {repo_url}")
