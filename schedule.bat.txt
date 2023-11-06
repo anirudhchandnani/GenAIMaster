@@ -1,1 +1,0 @@
-C:\Users\LENOVO\Anaconda3\Scripts\activate base && "C:\Users\LENOVO\Anaconda3\python.exe" "C:\Users\LENOVO\Desktop\work\github\blueDartYfinance.py"
