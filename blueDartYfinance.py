@@ -5,71 +5,73 @@ Created on Sat Nov  4 15:57:41 2023
 @author: anirudh
 """
 
-print("hello")
+# print("hello")
 
-# import yfinance as yf
-# import pandas as pd
-# from datetime import datetime, timedelta
-# import os
-# import subprocess
-# from datetime import date
-
-
-# repo_url = "https://github.com/anirudhchandnani/GenAIMaster.git"
-
-# import time
-
-# # Sleep for two seconds
-# time.sleep(2)
-
-# # Set the path to your local clone of the repository
-# local_repo_path = r"C:\Users\LENOVO\Desktop\work\github"
-
-# # Change to the local repository directory
-# os.chdir(local_repo_path)
-
-# # Create a random change in a Python file
-# # random_value = random.randint(1, 100)
-# file_to_modify = "blueDartYfinance.py"  # Change this to the actual file you want to modify
-# with open(file_to_modify, "a") as file:
-#     file.write(f"\n# Updated date: ({date.today()})")
+import yfinance as yf
+import pandas as pd
+from datetime import datetime, timedelta
+import os
+import subprocess
+from datetime import date
 
 
-# yest_data = pd.read_csv(r"C:\Users\LENOVO\Desktop\work\github\blue_dart_stock_data.csv")
-# yest_data['Datetime'] = pd.to_datetime(yest_data['Datetime'],utc = True)
+repo_url = "https://github.com/anirudhchandnani/GenAIMaster.git"
 
-# # Define the stock symbol (Blue Dart Express)
-# symbol = "BLUEDART.BO"
+import time
 
-# # Calculate the date range (previous 7 days)
-# end_date = datetime.now()
-# start_date = end_date - timedelta(days=7)
+# Sleep for two seconds
+time.sleep(2)
 
-# # Download stock data from Yahoo Finance
-# stock_data = yf.download(tickers="GC=F", period="5d", interval="1m", start = start_date, end = end_date ).reset_index()
+# Set the path to your local clone of the repository
+local_repo_path = r"C:\Users\LENOVO\Desktop\work\github"
 
-# # Save the data to a CSV file
+# Change to the local repository directory
+os.chdir(local_repo_path)
 
-# stock_data['Datetime'] = pd.to_datetime(stock_data['Datetime'], utc = True)
-# stock_data = yest_data.append(stock_data).reset_index(drop = True)
-# stock_data['Datetime'] = stock_data['Datetime'].dt.strftime('%Y-%m-%d %H:%M:%S')
-
-
-# stock_data =  stock_data.drop_duplicates(subset = ['Datetime'])
-
-# stock_data.to_csv(r"C:\Users\LENOVO\Desktop\work\github\blue_dart_stock_data.csv", index = None)
+# Create a random change in a Python file
+# random_value = random.randint(1, 100)
+file_to_modify = "blueDartYfinance.py"  # Change this to the actual file you want to modify
+with open(file_to_modify, "a") as file:
+    file.write(f"\n# Updated date: ({date.today()})")
 
 
-# # Commit and push the change
-# commit_message = f"Data updated today: ({date.today()})"
-# subprocess.run(["git", "add", "."])
-# subprocess.run(["git", "commit", "-m", commit_message])
-# subprocess.run(["git", "push", "origin", "main"])
+yest_data = pd.read_csv(r"C:\Users\LENOVO\Desktop\work\github\blue_dart_stock_data.csv")
+yest_data['Datetime'] = pd.to_datetime(yest_data['Datetime'],utc = True)
 
-# print(f"Data uploaded today  ({date.today()}) {repo_url}")
+# Define the stock symbol (Blue Dart Express)
+symbol = "BLUEDART.BO"
+
+# Calculate the date range (previous 7 days)
+end_date = datetime.now()
+start_date = end_date - timedelta(days=7)
+
+# Download stock data from Yahoo Finance
+stock_data = yf.download(tickers="GC=F", period="5d", interval="1m", start = start_date, end = end_date ).reset_index()
+
+# Save the data to a CSV file
+
+stock_data['Datetime'] = pd.to_datetime(stock_data['Datetime'], utc = True)
+stock_data = yest_data.append(stock_data).reset_index(drop = True)
+stock_data['Datetime'] = stock_data['Datetime'].dt.strftime('%Y-%m-%d %H:%M:%S')
 
 
+stock_data =  stock_data.drop_duplicates(subset = ['Datetime'])
+
+stock_data.to_csv(r"C:\Users\LENOVO\Desktop\work\github\blue_dart_stock_data.csv", index = None)
+
+
+# Commit and push the change
+commit_message = f"Data updated today: ({date.today()})"
+subprocess.run(["git", "add", "."])
+subprocess.run(["git", "commit", "-m", commit_message])
+subprocess.run(["git", "push", "origin", "main"])
+
+print(f"Data uploaded today  ({date.today()}) {repo_url}")
 
 
 
 
+
+
+
+# Updated date: (2023-11-06)
