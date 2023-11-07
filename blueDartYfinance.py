@@ -67,7 +67,7 @@ subprocess.run(["git", "commit", "-m", commit_message])
 subprocess.run(["git", "push", "origin", "main"])
 
 print(f"Data uploaded today  ({date.today()}) {repo_url}")
-
+time.sleep(2)
 
 
 
@@ -81,6 +81,7 @@ print(f"Data uploaded today  ({date.today()}) {repo_url}")
 # Updated date: (2023-11-06)
 # Updated date: (2023-11-06)
 # Updated date: (2023-11-06)
+# Updated date: (2023-11-07)
 # Updated date: (2023-11-07)
 # Updated date: (2023-11-07)
 # Updated date: (2023-11-07)
