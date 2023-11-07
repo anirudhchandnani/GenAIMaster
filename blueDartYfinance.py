@@ -43,15 +43,15 @@ symbol = "BLUEDART.BO"
 
 # Calculate the date range (previous 7 days)
 end_date = datetime.now()
-start_date = end_date - timedelta(days=7)
+start_date = end_date - timedelta(days=5)
 
 # Download stock data from Yahoo Finance
-stock_data = yf.download(tickers="GC=F", period="5d", interval="1m", start = start_date, end = end_date ).reset_index()
+stock_data = yf.download(tickers="GC=F", interval="1m", start = start_date, end = end_date ).reset_index()
 
 # Save the data to a CSV file
 
 stock_data['Datetime'] = pd.to_datetime(stock_data['Datetime'], utc = True)
-stock_data = yest_data.append(stock_data).reset_index(drop = True)
+stock_data = yest_data._append(stock_data).reset_index(drop = True)
 stock_data['Datetime'] = stock_data['Datetime'].dt.strftime('%Y-%m-%d %H:%M:%S')
 
 
@@ -75,3 +75,33 @@ print(f"Data uploaded today  ({date.today()}) {repo_url}")
 
 
 # Updated date: (2023-11-06)
+# Updated date: (2023-11-06)
+# Updated date: (2023-11-06)
+# Updated date: (2023-11-06)
+# Updated date: (2023-11-06)
+# Updated date: (2023-11-06)
+# Updated date: (2023-11-06)
+# Updated date: (2023-11-07)
+# Updated date: (2023-11-07)
+# Updated date: (2023-11-07)
+# Updated date: (2023-11-07)
+# Updated date: (2023-11-07)
+# Updated date: (2023-11-07)
+# Updated date: (2023-11-07)
+# Updated date: (2023-11-07)
+# Updated date: (2023-11-07)
+# Updated date: (2023-11-07)
+# Updated date: (2023-11-07)
+# Updated date: (2023-11-07)
+# Updated date: (2023-11-07)
+# Updated date: (2023-11-07)
+# Updated date: (2023-11-07)
+# Updated date: (2023-11-07)
+# Updated date: (2023-11-07)
+# Updated date: (2023-11-07)
+# Updated date: (2023-11-07)
+# Updated date: (2023-11-07)
+# Updated date: (2023-11-07)
+# Updated date: (2023-11-07)
+# Updated date: (2023-11-07)
+# Updated date: (2023-11-07)
