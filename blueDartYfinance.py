@@ -115,7 +115,7 @@ stock_data = yf.download(tickers="GC=F", interval="1m", start=start_date, end=en
 
 # Save the data to a CSV file
 stock_data['Datetime'] = pd.to_datetime(stock_data['Datetime'], utc=True)
-stock_data = yest_data.append(stock_data).reset_index(drop=True)
+stock_data = yest_data._append(stock_data).reset_index(drop=True)
 stock_data['Datetime'] = stock_data['Datetime'].dt.strftime('%Y-%m-%d %H:%M:%S')
 
 stock_data = stock_data.drop_duplicates(subset=['Datetime'])
@@ -179,6 +179,8 @@ time.sleep(2)
 # Updated date: (2023-11-10)
 # Updated date: (2023-11-10)
 # Updated date: (2023-11-10)
+# Updated date: (2023-11-11)
+# Updated date: (2023-11-11)
 # Updated date: (2023-11-11)
 # Updated date: (2023-11-11)
 # Updated date: (2023-11-11)
