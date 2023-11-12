@@ -94,6 +94,9 @@ os.chdir(local_repo_path)
 # Fetch changes from the remote repository
 subprocess.run(["git", "fetch"])
 
+# Pull changes from the remote repository
+subprocess.run(["git", "pull"])
+
 # Create a random change in a Python file
 # random_value = random.randint(1, 100)
 file_to_modify = "blueDartYfinance.py"  # Change this to the actual file you want to modify
@@ -130,6 +133,7 @@ subprocess.run(["git", "push", "origin", "main"])
 
 print(f"Data uploaded today  ({date.today()}) {repo_url}")
 time.sleep(2)
+
 
 
 
@@ -179,6 +183,7 @@ time.sleep(2)
 # Updated date: (2023-11-10)
 # Updated date: (2023-11-10)
 # Updated date: (2023-11-10)
+# Updated date: (2023-11-11)
 # Updated date: (2023-11-11)
 # Updated date: (2023-11-11)
 # Updated date: (2023-11-11)
